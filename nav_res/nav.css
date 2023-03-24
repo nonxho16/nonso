@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+#logo a{
+    text-decoration: none;
+    font-size: 27px;
+    color: rgb(87, 87, 249);
+    font-weight: 700;
+}
+header{
+    /* border: 1px solid blue; */
+    height: 65px;
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+}
+nav{
+    display: flex;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+
+}
+ul a{
+    text-decoration: none;
+    color: white;
+
+
+}
+ul a:hover{
+    color: orange;
+
+}
+ul a.active{
+    color: aqua;
+}
+
+ul li{
+    /* border: 1px solid white; */
+    padding: 8px 10px;
+    margin-left: 15px;
+}
+#reg, #login{
+    /* border: 1px solid #cec; */
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#reg{
+    background-color: bisque;
+}
+#login{
+    background-color: rgb(245, 180, 101);
+}
+#reg:hover{
+    background-color: rgb(246, 207, 159);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#login:hover{
+    background-color: rgb(173, 102, 16);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+.hamburger div{
+    width: 30px;
+    height: 3.5px;
+    background-color: #ffffff;
+    margin: 5px 0px;
+}
+.show .line1{
+    transform: rotate(-45deg) translate(-6px,6px);
+}
+.show .line2{
+    opacity:0;
+}
+.show .line3{
+    transform: rotate(45deg) translate(-6px,-6px);
+}
+.show #mob-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#mob-menu ul{
+    display: flex;
+    flex-direction: column;
+}
+#mob-menu a{
+    margin-top: 15px;
+}
+#mob-menu{
+    position: absolute;
+    /* border: 1px solid red; */
+    left: 0;
+    top: 65px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: navy;
+}
+@media screen and (max-width:760px) {
+    nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
